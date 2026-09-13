@@ -1,3 +1,4 @@
+
 public class array01 {
 
     // average array
@@ -132,9 +133,56 @@ public class array01 {
 }
 
 
-
-    public static void main(String[] args) {
+    //swap two elements in array
+    static void swapelements(int arr[]){
+        for(int i=0; i<arr.length-1; i+=2){
+            int temp = arr[i];
+            arr[i] = arr[i+1];
+            arr[i+1] = temp;
+        }
+        /*Main file
+        public static void main(String[] args) {
         int arr[] = {1,2,4,7,11,3,23};
-        System.out.println("Unsorted element is: " + getUnsortedelem(arr));
+        swapelements(arr);
+        System.out.println("Array with swapped elements is: "
+                + Arrays.toString(arr));
+    }
+}
+ */
+    }
+
+
+    // Print Array Intersection element
+    static void Commonelements(int arr1[], int arr2[]){
+        for(int i=0; i<arr1.length; i++){
+            for(int j=0; j<arr2.length; j++){
+                if(arr1[i] == arr2[j]){
+                    System.out.println(arr1[i] + "");
+                }
+            }
+        }
+        /* Main file
+        public static void main(String[] args) {
+        int arr1[] = {1,2,4,5,6,8,9};
+        int arr2[] = {2,3,4,7,8};
+        System.out.println("Common elements are: ");
+        Commonelements(arr1, arr2);
+    }
+}
+ */
+    }
+
+    // two extreme elements in array
+
+    static void AlternateExtremeElems(int arr[]){
+        for(int i=0; i<arr.length; i++){
+            System.out.println(arr[i] + arr[arr.length-1-i]);
+        }
+    }
+    public static void main(String[] args) {
+        int arr1[] = {1,2,4,5,6,8,9};
+        int arr2[] = {2,3,4,7,8};
+        System.out.println("Common elements are: ");
+        Commonelements(arr1, arr2);
     }
 }
