@@ -173,16 +173,37 @@ public class array01 {
     }
 
     // two extreme elements in array
-
     static void AlternateExtremeElems(int arr[]){
-        for(int i=0; i<arr.length; i++){
-            System.out.println(arr[i] + arr[arr.length-1-i]);
+        int n = arr.length;
+        int i = 0;
+        int j = n-1;
+        while(i <= j) {
+            if(i == j){
+                System.out.println(arr[i]);
+                return;
+            }
+            else{
+                // i<j wala case
+                System.out.println(arr[i]);
+                i++;
+                System.out.println(arr[j]);
+                j--;
+            }
         }
+        /* main file
+          public static void main(String[] args) {
+        int arr[] = {1,2,4,5,6,8,9};
+        AlternateExtremeElems(arr);
     }
+}
+
+         */
+    }
+
+    // Type io 
+    
     public static void main(String[] args) {
-        int arr1[] = {1,2,4,5,6,8,9};
-        int arr2[] = {2,3,4,7,8};
-        System.out.println("Common elements are: ");
-        Commonelements(arr1, arr2);
+        int arr[] = {1,2,4,5,6,8,9};
+        AlternateExtremeElems(arr);
     }
 }
